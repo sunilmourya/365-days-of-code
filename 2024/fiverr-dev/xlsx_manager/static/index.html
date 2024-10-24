@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operation UI</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+
+<body>
+<div class="form-container">
+    <form id="fileForm">
+        <div class="form-group horizontal-group">
+            <button type="button" id="addExcel">Add Excel</button>
+            <button type="button" id="addZip">Add Zip</button>
+            <label for="deleteRows">Delete first
+                <input type="number" id="deleteRows" placeholder="N" min="1" style="width: 50px;">
+                rows:
+            </label>
+            <button type="button" id="addFolder">Add Folder</button>
+        </div>
+
+        <div id="fileListContainer">
+            <ul id="fileList"></ul>
+        </div>
+        <p id="totalFiles" class="bold">Total 0 files</p>
+        <div class="form-group">
+            <button type="submit">Submit</button>
+            <button type="button" id="clearForm">Clear</button>
+        </div>
+    </form>
+    <div id="statusContainer" class="status-container" style="display:none;">
+        <p id="statusMessage"></p>
+    </div>
+    <div id="downloadLinkContainer" class="download-link-container" style="display:none;">
+        <p>Your processed file is ready: <a id="downloadLink" href="#" target="_blank"></a></p>
+    </div>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+
+</html>
